@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import { FiLogIn} from 'react-icons/fi';
 import logoimg from '../../assets/logo.svg';
 import { Container, Content, Background } from './style';
 

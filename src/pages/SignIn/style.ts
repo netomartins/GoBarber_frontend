@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { shade } from 'polished';
 
 import signInBackgroundImg from '../../assets/sign-in-background.png';
@@ -36,14 +36,13 @@ export const Content = styled.div`
 
     &::placeholder {
       color: #766360;
-
     }
-    & + input{
+    & + input {
       margin-top: 8px;
     }
   }
 
-  button{
+  button {
     background: #ff9000;
     height: 56px;
     border-radius: 10px;
@@ -70,9 +69,8 @@ export const Content = styled.div`
       color: ${shade(0.2, '#f4ede8')};
     }
   }
-}
 
- > a {
+  > a {
     color: #ff9000;
     display: block;
     margin-top: 24px;
