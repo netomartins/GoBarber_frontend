@@ -11,6 +11,7 @@
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.21",
+    "@types/yup": "^0.29.13",
     "@unform/core": "^2.1.5",
     "@unform/mobile": "^2.1.6",
     "@unform/web": "^2.1.5",
@@ -21,7 +22,8 @@
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
