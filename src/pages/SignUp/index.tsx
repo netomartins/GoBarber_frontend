@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
@@ -12,6 +14,7 @@ import Button from '../../components/Button';
 const SignUp: React.FC = () => {
 
   // eslint-disable-next-line @typescript-eslint/ban-types
+  // eslint-disable-next-line react/jsx-no-bind
   function handleSubmit(data: object ): void {
     console.log(data);
 
