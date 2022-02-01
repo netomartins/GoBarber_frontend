@@ -14,8 +14,7 @@ import { Container, Content, Background } from './style';
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  const handleSubmit = useCallback(async (data: object) => {
+  const handleSubmit = useCallback(async (data: unknown) => {
     console.log(data);
     try {
       formRef.current?.setErrors({});
