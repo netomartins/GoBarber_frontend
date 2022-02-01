@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable prettier/prettier */
-import React, {useRef, useCallback}from 'react';
+import React, {useRef, useCallback, useContext} from 'react';
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import getValidationErrors from '../../utils/getValidationErros';
+import { AuthContext } from '../../context/AuthContext';
 
 import logoimg from '../../assets/logo.svg';
 import { Container, Content, Background } from './style';
@@ -18,6 +19,9 @@ const SignIn: React.FC = () => {
 
 
   const formRef = useRef<FormHandles>(null);
+
+  const { signIn } = useContext(AuthContext);
+
 
   // eslint-disable-next-line @typescript-eslint/ban-types
   const handleSubmit = useCallback(async (data: object) => {
@@ -33,13 +37,15 @@ const SignIn: React.FC = () => {
       await schema.validate(data, {
         abortEarly: false,
       });
+
+      signIn();
     } catch (err) {
       console.log(err);
 
       const errors = getValidationErrors(err as Yup.ValidationError);
       formRef.current?.setErrors(errors);
     }
-  }, []);
+  }, [signIn]);
 
   return (
     <Container>
