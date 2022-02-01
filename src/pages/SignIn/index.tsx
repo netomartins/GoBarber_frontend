@@ -46,10 +46,12 @@ const SignIn: React.FC = () => {
 
       });
     } catch (err) {
-      console.log(err);
+      if(err instanceof Yup.ValidationError) {
+        const errors = getValidationErrors(err as Yup.ValidationError);
+        formRef.current?.setErrors(errors);
+      }
+        /* disparar um Toast */
 
-      const errors = getValidationErrors(err as Yup.ValidationError);
-      formRef.current?.setErrors(errors);
     }
   }, [signIn]);
 
