@@ -13,7 +13,7 @@ interface RouteProps extends RactDOMRouteProps {
 }
 
 const Route: React.FC<RouteProps> = ({
-  isPrivate = false,
+  isPrivate = undefined,
   component: Component,
   ...rest
 }) => {
