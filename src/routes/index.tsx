@@ -5,6 +5,7 @@ import Route from './route';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import ForgotPassword from '../pages/ForgotPassword';
+import ResetPassword from '../pages/ResetPassword';
 
 import Dashboard from '../pages/Dashboard';
 
@@ -15,6 +16,12 @@ const Routes: React.FC = () => (
     <Route
       path="/forgot-password/"
       component={ForgotPassword}
+      isPrivate={false}
+    />
+
+    <Route
+      path="/reset-password/"
+      component={ResetPassword}
       isPrivate={false}
     />
 
