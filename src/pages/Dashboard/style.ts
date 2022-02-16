@@ -41,7 +41,7 @@ export const HeaderContent = styled.div`
 export const Profile = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 80px;
+  margin-left: 25px;
 
   img {
     width: 56px;
@@ -59,9 +59,15 @@ export const Profile = styled.div`
       color: #f4ede8;
     }
 
-    strong {
+    a {
+      text-decoration: none;
       color: #ff9000;
       margin-top: 8px;
+      font-size: 20px;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 `;
@@ -163,6 +169,9 @@ export const Section = styled.section`
     display: block;
     padding-bottom: 16px;
     margin-bottom: 16px;
+  }
+  p {
+    color: #999591;
   }
 `;
 

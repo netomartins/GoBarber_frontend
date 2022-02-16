@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable prettier/prettier */
 import React, { useRef, useCallback, useState } from 'react';
-import { FiLogIn, FiMail} from 'react-icons/fi';
+import { FiArrowLeft, FiMail } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { Form } from '@unform/web'
 import { FormHandles } from '@unform/core';
@@ -100,7 +100,7 @@ const ForgotPassword: React.FC = () => {
           </Form>
 
           <Link to="/">
-            <FiLogIn />
+            <FiArrowLeft />
             Voltar ao Login
           </Link>
 
