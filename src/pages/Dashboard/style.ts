@@ -30,6 +30,11 @@ export const HeaderContent = styled.div`
       width: 20px;
       height: 20px;
     }
+    span {
+      display: flex;
+      flex-direction: column;
+      color: #ff9000;
+    }
   }
 `;
 
