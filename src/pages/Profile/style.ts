@@ -2,9 +2,25 @@ import { shade } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: stretch;
+  > header {
+    height: 144px;
+    background: #28262e;
+
+    display: flex;
+    align-items: center;
+
+    div {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+
+      svg {
+        color: #999591;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -13,7 +29,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  margin: -176px 0 auto;
 
   form {
     margin: 80px 0;
@@ -56,6 +72,7 @@ export const AvatarInput = styled.div`
   svg {
     width: 20px;
     height: 20px;
+    color: #312e38;
   }
 
   & :hover {
