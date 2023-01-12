@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable prettier/prettier */
 import React, { useRef, useCallback } from 'react';
-import {FiLock } from 'react-icons/fi';
+import { FiLock } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { Form } from '@unform/web'
 import { FormHandles } from '@unform/core';
