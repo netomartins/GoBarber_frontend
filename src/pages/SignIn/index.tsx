@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable prettier/prettier */
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useEffect } from 'react';
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { Form } from '@unform/web'
 import { FormHandles } from '@unform/core';
 import { Link, useHistory } from 'react-router-dom';
+import OneSignal from 'react-onesignal';
 import getValidationErrors from '../../utils/getValidationErros';
 import { useAuth } from '../../hooks/Auth';
 import { useToast } from '../../hooks/Toast';
@@ -30,6 +31,12 @@ const SignIn: React.FC = () => {
   const { addToast } = useToast();
   const history = useHistory();
 
+
+  useEffect(() => {
+    OneSignal.init({
+      appId: '0e813df9-b2c9-487c-8fd3-1e4a145e8425',
+    });
+  }, []);
 
   const handleSubmit = useCallback(async (data: SignInFormData) => {
     try {
